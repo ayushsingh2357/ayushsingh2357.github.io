@@ -1,0 +1,233 @@
+<!-- This website is created by Ayush, Abhay and Manoj as web project
+We have used bootstrap, font-awesome library, google places, javascript, jquery, google fonts, html css to design this page
+id for login: user@rentmecar.com and password: password
+You can contact us at ayushsingh2357@gmail.com -->
+ <html>
+    <head>
+        <title>Sign Up: Rent me Car!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="web.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body onload="setTimeout(myFunction,3350);">
+      <div id="loading">
+      	<h1 class="display-4 text-center mt-2 pt-5">Site made by Ayush and team with love<img src="images/heart.svg" class="ml-2" height="35" width="35"></h1> 
+      
+        <h4 class="display-6 text-center muted mt-4 pt-3 ">Please wait while Sign Up page is loading!!!</h4>
+      </div>
+      
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pt-0">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <a class="navbar-brand pt-0 pb-0" href="index.html"><img src="images/icon.png" alt="Rent me Car! logo" width="170" height="63" class="d-inline-block align-top"></a>
+                    
+                      <div class="collapse navbar-collapse mt-2" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mr-1 mt-2 mt-lg-2 ml-auto">
+                          <li class="nav-item pl-3">
+                            <a class="nav-link" href="about.html"><strong>About Us</strong>
+                            </a>
+                          </li>
+                          <li class="nav-item pl-3">
+                            <a class="nav-link" href="#contact"><strong>Contact Us</strong></a>
+                          </li>
+                          <li class="nav-item pl-3">
+                            <a class="nav-link"  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;"><strong>Bookings!</strong>
+                            </a>
+                            <li class="nav-item pl-3">
+                              <a class="nav-link" href="#popular"><strong>Popular Locations</strong>
+                              </a>
+                          <li class="nav-item pl-4">
+                            <a class="btn btn-secondary"  data-toggle="modal" data-target="#exampleModalCenter" role="button" style="color: white">Log In</a>
+                          </li>
+                         
+                          
+
+                        </ul>
+                        
+                </div>
+                
+                </div>
+              </nav>
+              <h1 class="display-3 text-center mt-2 pt-2 ">Sign Up Form</h1>
+              <h5 class="display-6 text-center mt-3 pt-3 text-muted">Please fill in this form to join our Rent me CAR! family</h5>
+              <div class="container mt-1 pt-1"  style="width: 50%;">
+              
+              <form onsubmit="myf3()" action="bookings.html">
+                
+                  <div class="form-group" >
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" required>
+                  </div>
+                  <div class="form-group ">
+                    <label for="inputphone">Phone</label>
+                    <input type="tel" class="form-control" id="inputEmail4" placeholder="Please use Country Code eg. +91" required>
+                  </div>
+                
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Adress Line-1" required>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Address 2</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Adress Line-2" required>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <input type="text" class="form-control" id="inputState" required>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Pin</label>
+                    <input type="text" class="form-control" id="inputZip" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                    <label class="form-check-label" for="gridCheck">
+                      I agree to all terms and conditions
+                    </label>
+                  </div>
+                </div>
+                <input type="submit" class="btn btn-dark ">
+              </form>
+
+            </div>
+
+
+
+
+
+
+
+
+
+              <footer class="footer">
+                <div class="footer-left col-md-4 col-sm-6">
+                  <p class="about">
+                    <span> About the company</span> This company was founded on 15th of March as an Computer Science Project by three young charming computer science
+                    engineering students to empower others by giving them comfort without burdens. This website uses bootstrap 4, jquery, google fonts, font-awesome icons, google maps places API and of-course HTML, CSS and Javascript
+                  </p>
+                  <div class="icons">
+                    <a href="https://www.facebook.com/Rent-me-Car-100565381634108"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/rentmecarweb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://instagram.com/rentmecarweb"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="footer-center col-md-4 col-sm-6" id="contact">
+                  <div>
+                    <h3 class="display6 pl-3" style="color: ghostwhite;">Contact Us</h3>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Gangotri Heights</span> Patna, Bihar, India</p>
+                  </div>
+                  <div>
+                    <i class="fa fa-phone"></i>
+                    <p> 180085858622 (toll-free) </p>
+                  </div>
+                  <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:rentmecarr@gmail.com"> rentmecarr@gmail.com</a></p>
+                  </div>
+                </div>
+                <div class="footer-right col-md-4 col-sm-6">
+                  <h2>Rent me Car! Inc.<span> <img src="images/icon.png" width="180" class="text-center" height="110"></span></h2>
+                  <p class="menu">
+                    <a href="index.html"> Home</a> |
+                    <a href="about.html"> About Us</a> |
+                    <a href="#contact"> Contact Us</a> |
+                    <a  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;" > Bookings</a> 
+                    <a href="popular.html"> Popular Locations</a> |
+                    
+                  </p>
+                  <p class="name"> Rent me Car! &copy; 2020</p>
+                </div>
+              </footer>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalCenterTitle">Please Login to Continue</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="container">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address or Phone Number</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+            </div>
+        </div>
+        <a style="cursor: pointer;" onclick="myf2()" class="text-center pb-5" >Forgotten password?</a>
+        <h6 class="text-muted mt-2 mb-2">Hint: email: user@rentmecar.com and
+          password: password
+        </h6>
+        <hr>
+ 
+          <button type="button" class="btn btn-secondary" onclick="myf()">Login</button>
+       
+      </form>
+    </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        function myf3()
+        {
+            alert('Thank You! Welcome to Rent me CAR family!');
+            window.location.href="bookings.html";
+        }
+        function myf2(){
+          alert('We dont have time to make forgotten password page for you. Try to remember the password or forget your account')
+        }
+        function myf(){
+          var username=$('#exampleInputEmail1').val();
+          var password=$('#exampleInputPassword1').val();
+          if(username=='user@rentmecar.com'&&password=='password'){
+            window.location.href="bookings.html";
+          }
+          else alert('Wrong Username or Password');
+        }
+        </script>
+        <script>
+              // $(document).ready(function(){
+                  // 	$('div#loading').removeAttr('id');
+              // });
+              var preloader = document.getElementById("loading");
+              // window.addEventListener('load', function(){
+              // 	preloader.style.display = 'none';
+              // 	})
+      
+              function myFunction(){
+                  preloader.style.display = 'none';
+              };
+          </script>
+        </body>
+        </html>

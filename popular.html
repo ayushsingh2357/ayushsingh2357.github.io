@@ -1,0 +1,568 @@
+<!-- This website is created by Ayush, Abhay and Manoj as web project
+We have used bootstrap, font-awesome library, google places, javascript, jquery, google fonts, html css to design this page
+id for login: user@rentmecar.com and password: password
+You can contact us at ayushsingh2357@gmail.com -->
+<html>
+    <head>
+        <title>Popular Locations: Rent me Car!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="web.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+         
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+body{
+  background-image: url("images/bookings.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#demo {
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+
+.green{
+  background-color:#6fb936;
+}
+        .thumb{
+            margin-bottom: 30px;
+        }
+        
+        .page-top{
+            margin-top:85px;
+        }
+
+   
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius:5px;
+    object-fit:cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+        
+ 
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+    .modal-header {
+   
+     border-bottom: none;
+}
+    .modal-title {
+        color:#000;
+    }
+    .modal-footer{
+      display:none;  
+    }
+
+</style>
+   </head>
+    <body onload="setTimeout(myFunction,3350);">
+      <div id="loading">
+      	<h1 class="display-4 text-center mt-2 pt-5">Site made by Ayush and team with love<img src="images/heart.svg" class="ml-2" height="35" width="35"></h1> 
+      
+        <h4 class="display-6 text-center muted mt-4 pt-3 ">Please wait while Popular Locations page is loading!!!</h4>
+      </div>
+      
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pt-0">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <a class="navbar-brand pt-0 pb-0" href="index.html"><img src="images/icon.png" alt="Rent me Car! logo" width="170" height="63" class="d-inline-block align-top"></a>
+                    
+                      <div class="collapse navbar-collapse mt-2" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mr-1 mt-2 mt-lg-2 ml-auto">
+                          <li class="nav-item pl-3">
+                            <a class="nav-link" href="about.html"><strong>About Us</strong>
+                            </a>
+                          </li>
+                          <li class="nav-item pl-3">
+                            <a class="nav-link" href="#contact"><strong>Contact Us</strong></a>
+                          </li>
+                          <li class="nav-item pl-3">
+                            <a class="nav-link"  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;"><strong>Bookings!</strong>
+                            </a>
+                            <li class="nav-item active pl-3">
+                              <a class="nav-link" href="#popular"><strong>Popular Locations</strong>
+                              </a>
+                          <li class="nav-item pl-4">
+                            <a class="btn btn-secondary"  data-toggle="modal" data-target="#exampleModalCenter" role="button" style="color: white">Log In</a>
+                          </li>
+                          <li class="nav-item pl-4 ">
+                            
+                            <a class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="If you have an account, click Log In" href="signup.html" role="button">Sign Up</a>
+                          </li>
+                          
+
+                        </ul>
+                        
+                </div>
+                
+                </div>
+              </nav>
+              <div class="container">
+                <h1 class="display-2 text-center mt-3" id="popular">Popular Locations</h1>
+                <h3 class="display-5 text-center text-muted">We are available in 28 states and 8 union-territories!</h3>
+              </div>
+
+
+
+    <!-- Page Content -->
+   <div class="container page-top">
+
+
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/patna.jpg" data-fancybox="gallery" >
+                <img  src="city/patna.jpg" class="zoom img-fluid"  alt="">
+               <div class="carousel-caption">
+          <h1>Patna
+              <h6>Head-Office</h6>
+          </h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/rajgir.jpg" data-fancybox="gallery" >
+                <img  src="city/rajgir.jpg" class="zoom img-fluid "  alt="rajgir">
+               <div class="carousel-caption">
+          <h1>
+              Rajgir
+          </h1>
+          <h6>IT Headquarters</h6>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/ranchi.jpg" data-fancybox="gallery" >
+                <img  src="city/ranchi.jpg" class="zoom img-fluid "  alt="ranchi">
+               <div class="carousel-caption">
+          <h1>Ranchi</h1>  <h6>Southern Headquarters</h6>
+        </div>
+    </a>
+        </div>
+       
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/varanasi.jpg" data-fancybox="gallery" >
+                <img  src="city/varanasi.jpg" class="zoom img-fluid "  alt="varanasi">
+               <div class="carousel-caption">
+          <h1>Varanasi</h1>
+          <h6>North Headquarters</h6>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/agartala.jpg" data-fancybox="gallery" >
+                <img  src="city/agartala.jpg" class="zoom img-fluid "  alt="Agartala">
+               <div class="carousel-caption">
+          <h1>Agartala</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/ahmedabad.jpg" data-fancybox="gallery" >
+                <img  src="city/ahmedabad.jpg" class="zoom img-fluid "  alt="ahmedabad">
+               <div class="carousel-caption">
+          <h2>Ahmedabad</h2>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/amritsar.jpg" data-fancybox="gallery" >
+                <img  src="city/amritsar.jpg" class="zoom img-fluid "  alt="amritsar">
+               <div class="carousel-caption">
+          <h1>Amritsar</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/bangalore.jpg" data-fancybox="gallery" >
+                <img  src="city/bangalore.jpg" class="zoom img-fluid "  alt="bangalore">
+               <div class="carousel-caption">
+          <h1>Bangalore</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/begusarai.jpg" data-fancybox="gallery" >
+                <img  src="city/begusarai.jpg" class="zoom img-fluid "  alt="begusarai">
+               <div class="carousel-caption">
+          <h1>Begusarai</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/bhagalpur.jpg" data-fancybox="gallery" >
+                <img  src="city/bhagalpur.jpg" class="zoom img-fluid "  alt="bhagalpur">
+               <div class="carousel-caption">
+          <h1>Bhagalpur</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/bhopal.jpg" data-fancybox="gallery" >
+                <img  src="city/bhopal.jpg" class="zoom img-fluid "  alt="bhopal">
+               <div class="carousel-caption">
+          <h1>Bhopal</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/bhubaneswar.jpg" data-fancybox="gallery" >
+                <img  src="city/bhubaneswar.jpg" class="zoom img-fluid "  alt="bhubaneswar">
+               <div class="carousel-caption">
+          <h3>Bhubaneswar</h3>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/bokaro.jpg" data-fancybox="gallery" >
+                <img  src="city/bokaro.jpg" class="zoom img-fluid "  alt="bokaro">
+               <div class="carousel-caption">
+          <h1>Bokaro</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/chandigarh.jpg" data-fancybox="gallery" >
+                <img  src="city/chandigarh.jpg" class="zoom img-fluid "  alt="chandigarh">
+               <div class="carousel-caption">
+          <h1>Chandigarh</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/chennai.jpg" data-fancybox="gallery" >
+                <img  src="city/chennai.jpg" class="zoom img-fluid "  alt="chennai">
+               <div class="carousel-caption">
+          <h1>Chennai</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/darbhanga.jpg" data-fancybox="gallery" >
+                <img  src="city/darbhanga.jpg" class="zoom img-fluid "  alt="darbhanga">
+               <div class="carousel-caption">
+          <h1>Darbhanga</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/darjeeling.jpg" data-fancybox="gallery" >
+                <img  src="city/darjeeling.jpg" class="zoom img-fluid "  alt="darjeeling">
+               <div class="carousel-caption">
+          <h1>Darjeeling</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/dehradun.jpg" data-fancybox="gallery" >
+                <img  src="city/dehradun.jpg" class="zoom img-fluid "  alt="dehradun">
+               <div class="carousel-caption">
+          <h1>Dehradun</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/delhi.jpg" data-fancybox="gallery" >
+                <img  src="city/delhi.jpg" class="zoom img-fluid "  alt="delhi">
+               <div class="carousel-caption">
+          <h1>Delhi</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/dhanbad.jpg" data-fancybox="gallery" >
+                <img  src="city/dhanbad.jpg" class="zoom img-fluid "  alt="dhanbad">
+               <div class="carousel-caption">
+          <h1>Dhanbad</h1>
+        </div>
+    </a>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/gaya.jpg" data-fancybox="gallery" >
+                <img  src="city/gaya.jpg" class="zoom img-fluid "  alt="gaya">
+               <div class="carousel-caption">
+          <h1>Gaya</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/guwahati.jpg" data-fancybox="gallery" >
+                <img  src="city/guwahati.jpg" class="zoom img-fluid "  alt="guwahati">
+               <div class="carousel-caption">
+          <h1>Guwahati</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/hyderabad.jpg" data-fancybox="gallery" >
+                <img  src="city/hyderabad.jpg" class="zoom img-fluid "  alt="hyderabad">
+               <div class="carousel-caption">
+          <h1>Hyderabad</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/jaipur.jpg" data-fancybox="gallery" >
+                <img  src="city/jaipur.jpg" class="zoom img-fluid "  alt="jaipur">
+               <div class="carousel-caption">
+          <h1>Jaipur</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/jalandhar.jpg" data-fancybox="gallery" >
+                <img  src="city/jalandhar.jpg" class="zoom img-fluid "  alt="jalandhar">
+               <div class="carousel-caption">
+          <h1>Jalandhar</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/jamshedpur.jpg" data-fancybox="gallery" >
+                <img  src="city/jamshedpur.jpg" class="zoom img-fluid "  alt="jamshedpur">
+               <div class="carousel-caption">
+          <h2>Jamshedpur</h2>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/kochi.jpg" data-fancybox="gallery" >
+                <img  src="city/kochi.jpg" class="zoom img-fluid "  alt="kochi">
+               <div class="carousel-caption">
+          <h1>Kochi</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/kolkata.jpg" data-fancybox="gallery" >
+                <img  src="city/kolkata.jpg" class="zoom img-fluid "  alt="kolkata">
+               <div class="carousel-caption">
+          <h1>Kolkata</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/lucknow.jpg" data-fancybox="gallery" >
+                <img  src="city/lucknow.jpg" class="zoom img-fluid "  alt="lucknow">
+               <div class="carousel-caption">
+          <h1>Lucknow</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/mumbai.jpg" data-fancybox="gallery" >
+                <img  src="city/mumbai.jpg" class="zoom img-fluid "  alt="mumbai">
+               <div class="carousel-caption">
+          <h1>Mumbai</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/muzzafarpur.jpg" data-fancybox="gallery" >
+                <img  src="city/muzzafarpur.jpg" class="zoom img-fluid "  alt="muzzafarpur">
+               <div class="carousel-caption">
+          <h2>Muzzafarpur</h2>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/nalanda.jpg" data-fancybox="gallery" >
+                <img  src="city/nalanda.jpg" class="zoom img-fluid "  alt="nalanda">
+               <div class="carousel-caption">
+          <h1>Nalanda</h1>
+        </div>
+    </a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/raipur.jpg" data-fancybox="gallery" >
+                <img  src="city/raipur.jpg" class="zoom img-fluid "  alt="raipur">
+               <div class="carousel-caption">
+          <h1>Raipur</h1>
+        </div>
+    </a>
+        </div>
+        
+        
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/sasaram.jpg" data-fancybox="gallery" >
+                <img  src="city/sasaram.jpg" class="zoom img-fluid "  alt="sasaram">
+               <div class="carousel-caption">
+          <h1>Sasaram</h1>
+        </div>
+    </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/shimla.jpg" data-fancybox="gallery" >
+                <img  src="city/shimla.jpg" class="zoom img-fluid "  alt="Shimla">
+               <div class="carousel-caption">
+          <h1>Shimla</h1>
+        </div>
+    </a>
+        </div>
+       
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="city/visakhapatnam.jpg" data-fancybox="gallery" >
+                <img  src="city/visakhapatnam.jpg" class="zoom img-fluid "  alt="visakhapatnam">
+               <div class="carousel-caption">
+          <h3>Visakhapatnam</h3>
+        </div>
+    </a>
+        </div>
+   </div>
+</div>
+
+
+
+              <footer class="footer">
+                <div class="footer-left col-md-4 col-sm-6">
+                  <p class="about">
+                    <span> About the company</span> This company was founded on 15th of March as an Computer Science Project by three young charming computer science
+                    engineering students to empower others by giving them comfort without burdens. This website uses bootstrap 4, jquery, google fonts, font-awesome icons, google maps places API and of-course HTML, CSS and Javascript
+                  </p>
+                  <div class="icons">
+                    <a href="https://www.facebook.com/Rent-me-Car-100565381634108"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/rentmecarweb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://instagram.com/rentmecarweb"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="footer-center col-md-4 col-sm-6" id="contact">
+                  <div>
+                    <h3 class="display6 pl-3" style="color: ghostwhite;">Contact Us</h3>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Gangotri Heights</span>Bihar, India</p>
+                  </div>
+                  <div>
+                    <i class="fa fa-phone"></i>
+                    <p> 180085858622 (toll-free) </p>
+                  </div>
+                  <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:rentmecarr@gmail.com"> rentmecarr@gmail.com</a></p>
+                  </div>
+                </div>
+                <div class="footer-right col-md-4 col-sm-6">
+                  <h2>Rent me Car! Inc.<span> <img src="images/icon.png" width="180" class="text-center" height="110"></span></h2>
+                  <p class="menu">
+                    <a href="index.html"> Home</a> |
+                    <a href="about.html"> About Us</a> |
+                    <a href="#contact"> Contact Us</a> |
+                    <a  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;" > Bookings</a> |
+                    <a href="#popular"> Popular Locations</a> |
+                    
+                  </p>
+                  <p class="name"> Rent me Car! &copy; 2020</p>
+                </div>
+              </footer>
+              <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="exampleModalCenterTitle">Please Login to Continue</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div class="container">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address or Phone Number</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+              </div>
+          </div>
+          <a style="cursor: pointer;" onclick="myf2()" class="text-center pb-5" >Forgotten password?</a>
+          <h6 class="text-muted mt-2 mb-2">Hint: email: user@rentmecar.com and
+            password: password
+          </h6>
+          <hr>
+            <a class="btn btn-dark" href="signup.html" role="button">Sign Up</a>
+            <button type="button" class="btn btn-secondary" onclick="myf()">Login</button>
+         
+        </form>
+      </div>
+        </div>
+      </div>
+    </div>
+        
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY0H5UPj-prdAnDAQ-mjQHE3AVQKRZUJw&libraries=places"></script>
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+                  
+    
+
+    <script>
+      function myf2(){
+        alert('We dont have time to make forgotten password page for you. Try to remember the password or forget your account')
+      }
+      function myf(){
+        var username=$('#exampleInputEmail1').val();
+        var password=$('#exampleInputPassword1').val();
+        if(username=='user@rentmecar.com'&&password=='password'){
+          window.location.href="bookings.html";
+        }
+        else alert('Wrong Username or Password');
+      }
+      </script>
+      <script>
+            // $(document).ready(function(){
+                // 	$('div#loading').removeAttr('id');
+            // });
+            var preloader = document.getElementById("loading");
+            // window.addEventListener('load', function(){
+            // 	preloader.style.display = 'none';
+            // 	})
+    
+            function myFunction(){
+                preloader.style.display = 'none';
+            };
+        </script>
+        <script>
+            $(document).ready(function(){
+  $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+    
+    $(".zoom").hover(function(){
+		
+		$(this).addClass('transition');
+	}, function(){
+        
+		$(this).removeClass('transition');
+	});
+});
+    
+        </script>
+        </body>
+    </html>

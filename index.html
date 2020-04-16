@@ -1,0 +1,512 @@
+<!-- This website is created by Ayush, Abhay and Manoj as web project
+We have used bootstrap, font-awesome library, google places, javascript, jquery, google fonts, html css to design this page
+id for login: user@rentmecar.com and password: password
+You can contact us at ayushsingh2357@gmail.com -->
+<html>
+    <head>
+        <title>Rent me Car!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="web.css"
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <style>
+
+            body{
+  background-image: url("images/bookings.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+            }
+        </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   </head>
+    <body onload="setTimeout(myFunction,3350);">
+      <div id="loading">
+      	
+        <h4 class="display-5 text-center muted mt-5 pt-5 ">Please wait while Homepage is loading!!!</h4>
+      </div>
+      
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pt-0">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <a class="navbar-brand pt-0 pb-0" href="#home"><img src="images/icon.png" alt="Rent me Car! logo" width="170" height="63" class="d-inline-block align-top"></a>
+                    
+                      <div class="collapse navbar-collapse mt-2" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mr-1 mt-2 mt-lg-2 ml-auto">
+                          <li class="nav-item pl-3">
+                            <a class="nav-link" href="about.html"><strong>About Us</strong>
+                            </a>
+                          </li>
+                          <li class="nav-item pl-3">
+                            <a class="nav-link" href="#contact"><strong>Contact Us</strong></a>
+                          </li>
+                          <li class="nav-item pl-3">
+                            <a class="nav-link"  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;"><strong>Bookings!</strong>
+                            </a>
+                            <li class="nav-item pl-3">
+                              <a class="nav-link" href="popular.html"><strong>Popular Locations</strong>
+                              </a>
+                          <li class="nav-item pl-4">
+                            <a class="btn btn-secondary"  data-toggle="modal" data-target="#exampleModalCenter" role="button" style="color: white">Log In</a>
+                          </li>
+                          <li class="nav-item pl-4 ">
+                            
+                            <a class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="If you have an account, click Log In" href="signup.html" role="button">Sign Up</a>
+                          </li>
+                          
+
+                        </ul>
+                        
+                </div>
+                
+                </div>
+              </nav>
+              <section id="index_cover" class="jumbotron jumbotron-fluid d-none d-md-block">
+                    <div class="container">
+                        <div class="card bg-light" style="width: 30%; font-family: 'Ubuntu', sans-serif;" >
+                            <div class="card-body">
+                              <h2 id="home" class="card-title text-center"><strong>Rent a Car</strong></h2>
+                              <h6 class="card-subtitle mb-2 text-muted pt-1 text-center">Comfort without headaches!</h6>
+                              <hr>
+                              <div class="input-group">
+                              <div class="form-group">
+                                <div class="input-group-prepend">
+                                <div class="input-group-text">Location</div>
+                              </div>
+                            </div>
+                                
+                                <input type="text" class="form-control" id="search_input" placeholder="Enter your Location" />
+                                <input type="hidden" id="loc_lat" />
+                                <input type="hidden" id="loc_long" />
+                            </div>
+                            <div>
+                              <h3 class="text-center">OR</h3>
+                            </div>
+                            <div class="text-center">
+                              <button type="button" class="btn btn-primary" id="location-button"><img src="images/navigation.svg"> Use your current location</button>
+                            </div>
+                            <hr>
+
+                            <div class="input-group">
+                              <div class="form-group">
+                                <div class="input-group-prepend">
+                                <div class="input-group-text">Date</div>
+                              </div>
+                            </div>
+                                
+                                <input type="date" name="date" class="form-control" style="width: 50%"/>
+                              </div>
+                              <div class="input-group "  >
+                                <div class="form-group ">
+                                  <div class="input-group-prepend">
+                                  <div class="input-group-text">Time</div>
+                                </div>
+                              </div>
+                                  
+                                  <input type="time" class="form-control" />
+                                </div>
+                                
+                                <div class="text-center">
+                                  <button type="button" class="btn btn-outline-success" id="location-button"  data-toggle="modal" data-target="#exampleModalCenter"><img src="images/car.svg" class="mr-2" height="35" width="30">Bring me my Car!</button>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                    
+                  </div>
+                  
+                    
+              </section>
+              
+             <section id="small_device_cover" class="d-md-none">
+               <div class="container">
+                 <div class="text-center">
+                <h2 class="text-center mt-3"><strong>Rent a Car</strong></h2>
+                <h6 class="mb-2 text-muted pt-1 text-center">Comfort without headaches!</h6>
+                <hr>
+                <div class="input-group">
+                  <div class="form-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Location</div>
+                    </div>
+                </div>
+                    
+                    <input type="text" class="form-control" id="search_input_mobile" placeholder="Enter your location" />
+                    <input type="hidden" id="loc_lat_mobile" />
+                    <input type="hidden" id="loc_long_mobile" />
+              </div>
+              
+              
+                <h3 class="text-center">OR</h3>
+              
+              <div class="text-center">
+                <button type="button" class="btn btn-primary" id="location-button-mobile"><img src="images/navigation.svg"> Use your current location</button>
+              </div>
+              <hr>
+              
+                <div class="input-group" >
+                  <div class="form-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Date</div>
+                    </div>
+                  </div>
+                    
+                    <input type="date" class="form-control" />
+                </div>
+                
+                <div class="input-group "  >
+                  <div class="form-group ">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Time</div>
+                    </div>
+                  </div>
+                
+                    
+                    <input type="time" class="form-control" />
+                </div>
+           
+                <div class="text-center">
+                  <button type="button" class="btn btn-outline-success" id="location-button"  data-toggle="modal" data-target="#exampleModalCenter"><img src="images/car.svg" class="mr-2" height="35" width="30">Bring me my Car!</button>
+                </div>
+                </div>
+            
+
+             </section>
+             <div class="container mt-5">
+              <h1 class="display-4 text-center">Why rent with us?</h1>
+              <h2 class="display-6 text-center"><small class="text-muted">We want to give you comfort without any hassles</small> </h2>
+
+              <div class="row mt-5">
+                <div class="col-md-6">
+                  <div class="card mb-3" style="max-width: 540px;" id="card1">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="images/customer-care.jpg" class="card-img" alt="24*7 Customer Care" >
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">24x7 Customer Care Support</h5>
+                          <p class="card-text">We have a higly dedicated affluent customer-care support team available in every state who are available 24-hours a day to help you resolve your issues.
+                          </p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 540px;" id="card2" >
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="images/fuel.png" class="card-img" alt="..." >
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Fuel Cost included</h5>
+                        <p class="card-text">No hidden Costs with our rental system. Fuel costs included in the plan. We care for
+                          you so free accidental insurance is also covered in the plan
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+             </div>
+             <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 540px;" id="card3">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="images/giving-car.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Verified Cars</h5>
+                        <p class="card-text">
+                          Before adding any car to our catalogue, the cars go to through 5-level verification check. We check everything from legal papers to history of every criminal records of owner
+                          
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-3" style="max-width: 540px;" id="card4">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="images/save-money.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Car available for every budget</h5>
+                      <p class="card-text">We believe that every person deserves the comfort of car and so we have a humungous list of cars for people with every budget which are kept well insured and maintained
+                      </p>
+                      
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+           </div>
+          </div>
+          <div class="container mt-5">
+            <h1 class="display-4 text-center">Our Cars</h1>
+            <h4 class="display-6 text-center mb-4"><small class="text-muted">Beautiful from outside, Powerful from inside</small> </h4>
+            <div id="carouselExampleCaptions" class="carousel slide  carousel-fade" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                 <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="3500">
+                  <img src="images/indian car.jpg" class="d-block w-100 rounded-circle" alt="Ford Endeavour">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Ford Endeavour</h5>
+                    <p>The desert-hills of Rajasthan are having storms and camels are searching for you</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-interval="3500">
+                  <img src="images/indian-car.jpg" class="d-block w-100 rounded-circle" alt="Renault Duster">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Renault Duster</h5>
+                    <p>Ganga looks really beautiful in Kashi and Patna. Feel the calmness</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-interval="3500">
+                  <img src="images/indian-car2.jpg" class="d-block w-100 rounded-circle" alt="Range Rover">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Range Rover</h5>
+                    <p>Goa is on! Want to go on a bachelor trip</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-interval="3500">
+                  <img src="images/carcollage.jpg" class="d-block w-100 rounded-circle" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>And many thousands of Cars...</h5>
+                    <p class="text-center"><a href="#home" style="text-decoration: none; color: white;">Book Now</a></p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+          </div>
+          
+          <footer class="footer">
+            <div class="footer-left col-md-4 col-sm-6">
+              <p class="about">
+                <span> About the company</span> This company was founded on 15th of March as an Computer Science Project by three young charming computer science
+                engineering students to empower others by giving them comfort without burdens. This website uses bootstrap 4, jquery, google fonts, font-awesome icons, google maps places API and of-course HTML, CSS and Javascript
+              </p>
+              <div class="icons">
+                <a href="https://www.facebook.com/Rent-me-Car-100565381634108"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/rentmecarweb"><i class="fa fa-twitter"></i></a>
+                <a href="https://instagram.com/rentmecarweb"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="footer-center col-md-4 col-sm-6" id="contact">
+              <div>
+                <h3 class="display6 pl-3" style="color: ghostwhite;">Contact Us</h3>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Gangotri Heights</span> Patna, Bihar, India</p>
+              </div>
+              <div>
+                <i class="fa fa-phone"></i>
+                <p> 180085858622 (toll-free) </p>
+              </div>
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:rentmecarr@gmail.com"> rentmecarr@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="footer-right col-md-4 col-sm-6">
+              <h2>Rent me Car! Inc.<span> <img src="images/icon.png" width="180" class="text-center" height="110"></span></h2>
+              <p class="menu">
+                <a href="#home"> Home</a> |
+                <a href="about.html"> About Us</a> |
+                <a href="#contact"> Contact Us</a> |
+                <a  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;" > Bookings</a> |
+                <a href="popular.html"> Popular Locations</a> |
+               
+              </p>
+              <p class="name"> Rent me Car! &copy; 2020</p>
+            </div>
+          </footer>
+          <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalCenterTitle">Please Login to Continue</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address or Phone Number</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+          </div>
+      </div>
+      <a style="cursor: pointer;" onclick="myf2()" class="text-center pb-5" >Forgotten password?</a>
+      <h6 class="text-muted mt-2 mb-2">Hint: email: user@rentmecar.com and
+        password: password
+      </h6>
+      <div class="modal-footer">
+        <a class="btn btn-dark" href="signup.html" role="button">Sign Up</a>
+        <button type="button" class="btn btn-secondary" onclick="myf()">Login</button>
+      </div>
+    </form>
+  </div>
+    </div>
+  </div>
+</div>
+    
+              <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+              <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY0H5UPj-prdAnDAQ-mjQHE3AVQKRZUJw&libraries=places"></script>
+              
+
+<script>
+  $('#location-button').click(function(){
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position){
+          console.log(position);
+          $.get( "http://maps.googleapis.com/maps/api/geocode/json?latlng="+ position.coords.latitude + "," + position.coords.longitude +"&sensor=false", function(data) {
+            console.log(data);
+          })
+          var img = new Image();
+          img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=800x400&sensor=false";
+          $('#output').html(img);
+        });
+        
+    }
+  });
+</script>
+<script>
+  $('#location-button-mobile').click(function(){
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position){
+          console.log(position);
+          $.get( "http://maps.googleapis.com/maps/api/geocode/json?latlng="+ position.coords.latitude + "," + position.coords.longitude +"&sensor=false", function(data) {
+            console.log(data);
+          })
+          var img = new Image();
+          img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=800x400&sensor=false";
+          $('#output').html(img);
+        });
+        
+    }
+  });
+</script>
+
+<script>
+  var searchInput = 'search_input';
+
+$(document).ready(function () {
+var autocomplete;
+autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+types: ['geocode'],
+});
+
+google.maps.event.addListener(autocomplete, 'place_changed', function () {
+var near_place = autocomplete.getPlace();
+document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+document.getElementById('loc_long').value = near_place.geometry.location.lng();
+
+document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+});
+});
+$(document).on('change', '#'+searchInput, function () {
+document.getElementById('latitude_input').value = '';
+document.getElementById('longitude_input').value = '';
+
+document.getElementById('latitude_view').innerHTML = '';
+document.getElementById('longitude_view').innerHTML = '';
+});
+
+  var searchInputmob = 'search_input_mobile';
+
+$(document).ready(function () {
+var autocompletemob;
+autocompletemob = new google.maps.places.Autocomplete((document.getElementById(searchInputmob)), {
+types: ['geocode'],
+});
+
+google.maps.event.addListener(autocompletemob, 'place_changed', function () {
+var near_place = autocompletemob.getPlace();
+document.getElementById('loc_lat_mobile').value = near_place.geometry.location.lat();
+document.getElementById('loc_long_mobile').value = near_place.geometry.location.lng();
+
+document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+});
+});
+$(document).on('change', '#'+searchInputmob, function () {
+document.getElementById('latitude_input').value = '';
+document.getElementById('longitude_input').value = '';
+
+document.getElementById('latitude_view').innerHTML = '';
+document.getElementById('longitude_view').innerHTML = '';
+});
+
+</script>
+<script>
+  function myf2(){
+    alert('We dont have time to make forgotten password page for you. Try to remember the password or forget your account')
+  }
+  function myf(){
+    var username=$('#exampleInputEmail1').val();
+    var password=$('#exampleInputPassword1').val();
+    if(username=='user@rentmecar.com'&&password=='password'){
+      window.location.href="bookings.html";
+    }
+    else alert('Wrong Username or Password');
+  }
+  </script>
+  <script>
+		// $(document).ready(function(){
+			// 	$('div#loading').removeAttr('id');
+		// });
+		var preloader = document.getElementById("loading");
+		// window.addEventListener('load', function(){
+		// 	preloader.style.display = 'none';
+		// 	})
+
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>
+    </body>
+</html>
